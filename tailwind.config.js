@@ -11,7 +11,8 @@ export default {
         secondary : "#666666",
         tertiary : "#999999",
         background : "#F4F5F5",
-        def_border : "#000000"
+        def_border : "#000000",
+        shit_brown : "#A15830"
       },      
       fontFamily: {
         poppins : ["'Poppins'", 'sans-serif']
