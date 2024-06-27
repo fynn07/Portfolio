@@ -1,3 +1,4 @@
+import DownloadCVSvg from "../components/ui/Home/svg/DownloadCVSvg";
 import LocationSvg from "../components/ui/Home/svg/LocationSvg";
 
 const Home = () => {
@@ -25,6 +26,14 @@ const Home = () => {
                 My expertise lies in <span className="text-purple-500 font-semibold">Python</span>, <span className="text-orange-500 font-semibold">Java</span>, and the <span className="text-blue-500 font-semibold">PERN</span> web development stack. With hands-on experience collaborating with other developers on various projects, I am well-prepared to 
                 tackle challenges head-on, learn rapidly, and make significant contributions to the field of software development. My commitment to excellence and my proactive approach make me an ideal candidate
                  for any team looking to achieve outstanding results.</p>
+            </div>
+            
+            <div>
+                <button className="flex mt-11 items-center gap-3 py-2 px-4 border-gray-300 border rounded-lg transition-all duration-100 hover:bg-background">
+                        <DownloadCVSvg/>
+                        <p className="font-poppins text-primary text-sm">Download my CV</p>
+                </button>
+
             </div>
         </div>
     )
