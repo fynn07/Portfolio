@@ -5,15 +5,15 @@ import LinkedinSvg from "./svg/LinkedinSvg";
 const SocialLinks = () => {
     return (
         <div className="flex justify-center gap-4">
-            <button>
+            <a href="https://github.com/fynn07" target="_blank">
                 <GithubSvg/>
-            </button>
-            <button>
+            </a>
+            <a href="https://www.facebook.com/fynn.borja/" target="_blank">
                 <FacebookSvg/>
-            </button>
-            <button>
+            </a>
+            <a href="https://www.linkedin.com/in/fynn-borja-4384851bb/" target="_blank">
                 <LinkedinSvg/>                   
-            </button>
+            </a>
         </div>
     )
 }

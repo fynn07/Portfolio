@@ -3,7 +3,7 @@ import Home from "./pages/Home"
 
 function App() {
   return (
-    <div className="flex h-screen bg-background">
+    <div className="flex bg-background">
         <Navbar/>
         <Home/>
     </div>
