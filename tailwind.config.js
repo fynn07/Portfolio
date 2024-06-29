@@ -12,7 +12,8 @@ export default {
         tertiary : "#999999",
         background : "#F4F5F5",
         def_border : "#000000",
-        shit_brown : "#A15830"
+        shit_brown : "#A15830",
+        cebu_underground : "#0D0E10"
       },      
       fontFamily: {
         poppins : ["'Poppins'", 'sans-serif']

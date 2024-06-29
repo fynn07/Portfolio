@@ -16,7 +16,7 @@ const ProjectSection = () => {
                         <p className="font-poppins font-semibold text-sm text-primary">Cebu Underground Cave (Social Media Site)</p>
                     </div>
                 </Link>
-                <Link className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
+                <Link to={"/messaging-board"} className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
                     <img className="rounded-t-lg" src="./assets/messaging_board.png" alt="Project 2 Image" />
                     <div className="flex flex-col gap-1 p-4">
                         <div className="flex items-center justify-between">
@@ -26,7 +26,7 @@ const ProjectSection = () => {
                         <p className="font-poppins font-semibold text-sm text-primary">Anonymous Messaging Board</p>
                     </div>
                 </Link>
-                <Link className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
+                <Link to={"/gleam"} className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
                     <img className="rounded-t-lg" src="./assets/gleam_website.png" alt="Project 3 Image" />
                     <div className="flex flex-col gap-1 p-4">
                         <div className="flex items-center justify-between">

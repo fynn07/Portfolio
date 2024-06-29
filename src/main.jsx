@@ -4,6 +4,8 @@ import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider, ScrollRestoration } from 'react-router-dom'
 import UndergroundCaveProject from './pages/UndergroundCaveProject.jsx'
+import MessagingBoardProject from './pages/MessagingBoardProject.jsx'
+import GleamProject from './pages/GleamProject.jsx'
 
 const router = createBrowserRouter([
   {
@@ -13,6 +15,14 @@ const router = createBrowserRouter([
   {
     path: '/cebu-underground-cave',
     element: <UndergroundCaveProject />
+  },
+  {
+    path: '/messaging-board',
+    element: <MessagingBoardProject />
+  },
+  {
+    path: '/gleam',
+    element: <GleamProject />
   }
 ])
 
