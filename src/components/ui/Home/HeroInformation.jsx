@@ -5,7 +5,7 @@ const HeroInformation = () => {
     return (
         <div>
             <div className="flex">
-                <div className="flex items-center gap-2 justify-center bg-green-200 px-4 rounded-full">
+                <div className="flex items-center gap-2 justify-center bg-green-200 px-4 rounded-full shadow-sm">
                     <p className="text-2xl text-green-700 pb-1 animate-pulse">•</p>
                     <p className="text-sm text-green-600 font-poppins font-regular">Available for Work</p>
                 </div>
@@ -29,7 +29,7 @@ const HeroInformation = () => {
             </div>
             
             <div>
-                <button className="flex mt-11 items-center gap-3 py-2 px-4 border-gray-400 border rounded-lg transition-all duration-100 hover:bg-background">
+                <button className="flex mt-11 items-center gap-3 py-2 px-4 shadow-md border rounded-lg transition-all duration-100 hover:bg-background hover:scale-105">
                         <DownloadCVSvg/>
                         <p className="font-poppins text-primary text-sm">View my CV</p>
                 </button>

@@ -11,12 +11,12 @@ const NavButtons = () => {
                 <p className="text-secondary text-sm font-poppins font-medium">Home</p>
             </div>
             <div className="flex justify-start gap-4 px-4 py-2 rounded-lg transition-all duration-150 hover:bg-gray-200 hover:cursor-pointer">
-                <ProjectsSvg/>
-                <p className="text-secondary text-sm font-poppins font-medium">Projects</p>
+                <AboutSvg/>
+                <p className="text-secondary text-sm font-poppins font-medium">Stack</p>
             </div>
             <div className="flex justify-start gap-4 px-4 py-2 rounded-lg transition-all duration-150 hover:bg-gray-200 hover:cursor-pointer">
-                <AboutSvg/>
-                <p className="text-secondary text-sm font-poppins font-medium">About</p>
+                <ProjectsSvg/>
+                <p className="text-secondary text-sm font-poppins font-medium">Projects</p>
             </div>
             <div className="flex justify-start gap-4 px-4 py-2 rounded-lg transition-all duration-150 hover:bg-gray-200 hover:cursor-pointer">
                 <ContactSvg/>

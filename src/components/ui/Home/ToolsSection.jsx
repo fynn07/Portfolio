@@ -105,7 +105,7 @@ const ToolsSection = () => {
 
             <div className="flex flex-col border-2 border-background gap-8 rounded-lg px-8 py-8">
                 <p className="font-poppins font-medium text-lg">Tools</p>
-                <div className="grid grid-cols-2 gap-y-8">
+                <div className="grid grid-cols-3 gap-y-8">
                     <div className="flex gap-4">
                         <img className="w-12" src="./assets/git_logo.png" alt="git logo" />
                         <div className="flex flex-col">
@@ -118,6 +118,13 @@ const ToolsSection = () => {
                         <div className="flex flex-col">
                             <p className="font-poppins font-medium">Postman</p>
                             <p className="font-poppins font-medium text-secondary text-sm">API Testing</p>
+                        </div>
+                    </div>
+                    <div className="flex gap-4">
+                        <img className="w-12" src="./assets/vim_logo.png" alt="vim logo" />
+                        <div className="flex flex-col">
+                            <p className="font-poppins font-medium">Vim Motions</p>
+                            <p className="font-poppins font-medium text-secondary text-sm">Utility</p>
                         </div>
                     </div>
                 </div>
