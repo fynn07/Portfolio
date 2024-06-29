@@ -6,6 +6,11 @@ import { createBrowserRouter, RouterProvider, ScrollRestoration } from 'react-ro
 import UndergroundCaveProject from './pages/UndergroundCaveProject.jsx'
 import MessagingBoardProject from './pages/MessagingBoardProject.jsx'
 import GleamProject from './pages/GleamProject.jsx'
+import BookTrackerProject from './pages/BookTrackerProject.jsx'
+import TrackTroveProject from './pages/TrackTroveProject.jsx'
+import VisualizerProject from './pages/VisualizerProject.jsx'
+import GameProject from './pages/GameProject.jsx'
+import LeetcodeProject from './pages/LeetcodeProject.jsx'
 
 const router = createBrowserRouter([
   {
@@ -23,7 +28,27 @@ const router = createBrowserRouter([
   {
     path: '/gleam',
     element: <GleamProject />
-  }
+  },
+  {
+    path: '/book-tracker',
+    element: <BookTrackerProject />
+  },
+  {
+    path: '/tracktrove',
+    element: <TrackTroveProject />
+  },
+  {
+    path: '/visualizer',
+    element: <VisualizerProject />
+  },
+  {
+    path: '/exiled',
+    element: <GameProject/>
+  },
+  {
+    path: '/leetcode',
+    element: <LeetcodeProject/>
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

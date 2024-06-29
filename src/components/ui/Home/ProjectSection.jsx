@@ -36,7 +36,7 @@ const ProjectSection = () => {
                         <p className="font-poppins font-semibold text-sm text-primary">Gleam Band Website</p>
                     </div>
                 </Link>
-                <Link className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
+                <Link to={"/book-tracker"} className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
                     <img className="rounded-t-lg h-52" src="./assets/book_tracker.png" alt="Project 3 Image" />
                     <div className="flex flex-col gap-1 p-4">
                         <div className="flex items-center justify-between">
@@ -46,7 +46,7 @@ const ProjectSection = () => {
                         <p className="font-poppins font-semibold text-sm text-primary">Book Tracker</p>
                     </div>
                 </Link>
-                <Link className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
+                <Link to={"/tracktrove"} className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
                     <img className="rounded-t-lg w-full h-52" src="./assets/tracktrove.png" alt="Project 4 Image" />
                     <div className="flex flex-col gap-1 p-4">
                         <div className="flex items-center justify-between">
@@ -56,7 +56,7 @@ const ProjectSection = () => {
                         <p className="font-poppins font-semibold text-sm text-primary">TrackTrove (Spotify Music Downloader)</p>
                     </div>
                 </Link>
-                <Link className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
+                <Link to={"/visualizer"} className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
                     <img className="rounded-t-lg h-52 w-full" src="./assets/philippines_visualizer.jpeg" alt="Project 5 Image" />
                     <div className="flex flex-col gap-1 p-4">
                         <div className="flex items-center justify-between">
@@ -66,7 +66,7 @@ const ProjectSection = () => {
                         <p className="font-poppins font-semibold text-sm text-primary">Philippine Province Visualizer</p>
                     </div>
                 </Link>
-                <Link className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
+                <Link to={"/exiled"} className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
                     <img className="rounded-t-lg" src="./assets/exiled_game.png" alt="Project 5 Image" />
                     <div className="flex flex-col gap-1 p-4">
                         <div className="flex items-center justify-between">
@@ -76,7 +76,7 @@ const ProjectSection = () => {
                         <p className="font-poppins font-semibold text-sm text-primary">Exiled (Brotato Clone Game)</p>
                     </div>
                 </Link>
-                <Link className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
+                <Link to={"/leetcode"} className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">
                     <img className="rounded-t-lg h-52 w-full" src="./assets/leetcode_image.png" alt="Project 5 Image" />
                     <div className="flex flex-col gap-1 p-4">
                         <div className="flex items-center justify-between">
