@@ -1,10 +1,11 @@
 import { toast } from "react-hot-toast"
 import DownloadCVSvg from "./svg/DownloadCVSvg"
 import LocationSvg from "./svg/LocationSvg"
+import { motion } from "framer-motion"
 
 const HeroInformation = () => {
     return (
-        <div className="mb-28">
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} animate={{y:[100, 0], opacity:[0, 1]} }  transition={{delay: 0.15}} className="mb-28 2xl:mb-40">
             <div className="flex justify-center sm:justify-normal">
                 <div className="flex items-center gap-2 justify-center bg-green-200 px-4 rounded-full shadow-sm">
                     <p className="text-2xl text-green-700 pb-1 animate-pulse 2xl:text-3xl">•</p>
@@ -13,7 +14,7 @@ const HeroInformation = () => {
             </div>
 
             <div className="flex flex-col pt-8 gap-3">
-                <p className="font-poppins text-primary font-bold text-center sm:text-justify text-4xl 2xl:text-5xl">Hello! I'm Fynn Borja 👋</p>
+                <p className="font-poppins text-primary font-bold text-center sm:text-justify text-4xl 2xl:text-5xl">Hello! I'm Fynn Borja  👋</p>
                 <p className="font-poppins text-secondary font-bold text-2xl text-center sm:text-left sm:text-3xl 2xl:text-4xl">A Full-Stack Developer & Software Engineer</p>
             </div>
 
@@ -36,7 +37,7 @@ const HeroInformation = () => {
                 </button>
 
             </div>
-        </div>
+        </motion.div>
     )
 }
 
