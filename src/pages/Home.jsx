@@ -6,7 +6,7 @@ import { useRefs } from "../context/Context";
 const Home = () => {
     const {homeRef, stackRef, projectsRef} = useRefs();
     return (
-        <div className="flex flex-col flex-1 border-black border-opacity-10 border bg-white rounded-lg ml-72 px-28 py-24">
+        <div className="flex flex-col flex-1 border-black border-opacity-10 border bg-white rounded-lg md:ml-20 lg:ml-52 xl:ml-64 px-4 sm:px-8 lg:px-16 xl:px-28 py-24 2xl:pr-36 ">
             <div ref={homeRef}>
                 <HeroInformation/>
             </div>

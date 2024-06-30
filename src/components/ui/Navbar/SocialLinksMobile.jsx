@@ -1,10 +1,11 @@
+
 import FacebookSvg from "./svg/FacebookSvg";
 import GithubSvg from "./svg/GithubSvg";
 import LinkedinSvg from "./svg/LinkedinSvg";
 
-const SocialLinks = () => {
+const SocialLinksMobile = () => {
     return (
-        <div className="justify-center gap-4 hidden lg:flex">
+        <div className="justify-center items-center gap-11 pt-14 flex flex-col lg:hidden">
             <a href="https://github.com/fynn07" target="_blank">
                 <GithubSvg/>
             </a>
@@ -18,4 +19,4 @@ const SocialLinks = () => {
     )
 }
 
-export default SocialLinks;
+export default SocialLinksMobile;
