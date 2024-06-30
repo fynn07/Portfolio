@@ -5,7 +5,7 @@ import SocialLinksMobile from "./ui/Navbar/SocialLinksMobile";
 
 const Navbar = () => {
     return (
-        <div className="hidden md:flex h-screen fixed flex-col py-8 px-6 gap-4 bg-background md:w-20 lg:w-52 xl:w-64">
+        <div className="hidden sm:flex h-screen fixed flex-col py-8 px-6 gap-4 bg-background sm:w-20 lg:w-52 xl:w-64">
             <ProfileContent/>
             <SocialLinks/>
             <NavButtons/>
