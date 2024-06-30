@@ -32,7 +32,10 @@ const BookTrackerProject = () => {
                 </div>
 
                 <ul className="list-disc pl-3 pt-8">
-                    <li className="text-primary font-poppins text-sm">Used React for the backend</li>
+                    <li className="text-primary font-poppins text-sm">An application to help users track and manage their books.</li>
+                    <li className="text-primary font-poppins text-sm">Made with Java, JavaFX was utilized for the user interface.</li>
+                    <li className="text-primary font-poppins text-sm">JDBC and SQL are used for database connectivity and management.</li>
+                    <li className="text-primary font-poppins text-sm">Involves all CRUD operations for the backend.</li>
                 </ul>
             </div>
         </div>

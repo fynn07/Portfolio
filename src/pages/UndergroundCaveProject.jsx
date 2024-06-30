@@ -36,7 +36,11 @@ const UndergroundCaveProject = () => {
                 </div>
 
                 <ul className="list-disc pl-3 pt-8">
-                    <li className="text-primary font-poppins text-sm">Used React for the backend</li>
+                    <li className="text-primary font-poppins text-sm">Social media site designed to provide a platform for Cebuanos to connect.</li>
+                    <li className="text-primary font-poppins text-sm">Technology involves the PERN (Postgres, Express, React and Node) Stack.</li>
+                    <li className="text-primary font-poppins text-sm">Implements JWT for secure user authentication.</li>
+                    <li className="text-primary font-poppins text-sm">Photos are stored in the cloud with AWS S3 Buckets.</li>
+                    <li className="text-primary font-poppins text-sm">Deployed using Vercel and Supabase.</li>
                 </ul>
             </div>
         </div>

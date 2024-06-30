@@ -31,7 +31,9 @@ const VisualizerProject = () => {
                 </div>
 
                 <ul className="list-disc pl-3 pt-8">
-                    <li className="text-primary font-poppins text-sm">Used React for the backend</li>
+                    <li className="text-primary font-poppins text-sm">Python program that allows users to interactively learn about the provinces of the Philippines.</li>
+                    <li className="text-primary font-poppins text-sm">Pandas is utilized to read and display the coordinates and names of provinces from a CSV file depending on the user input.</li>
+                    <li className="text-primary font-poppins text-sm">The dataset was created using an automation tool I wrote that would provide the X and Y locations of the province through the click of a button. The name of the provinces were processed manually.</li>
                 </ul>
             </div>
         </div>

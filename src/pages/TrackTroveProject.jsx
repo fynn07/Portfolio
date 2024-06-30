@@ -31,7 +31,10 @@ const TrackTroveProject = () => {
                 </div>
 
                 <ul className="list-disc pl-3 pt-8">
-                    <li className="text-primary font-poppins text-sm">Used React for the backend</li>
+                    <li className="text-primary font-poppins text-sm">An application that allows users to download music from Spotify links.</li>
+                    <li className="text-primary font-poppins text-sm">User Interface was made using Tkinter.</li>
+                    <li className="text-primary font-poppins text-sm">Utilizes the Spotifty API to fetch song data.</li>
+                    <li className="text-primary font-poppins text-sm">Song data is funelled through the Pytube library to allow for the downloading of MP3 files.</li>
                 </ul>
             </div>
         </div>

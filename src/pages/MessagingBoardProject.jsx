@@ -34,7 +34,10 @@ const MessagingBoardProject = () => {
                 </div>
 
                 <ul className="list-disc pl-3 pt-8">
-                    <li className="text-primary font-poppins text-sm">Used React for the backend</li>
+                    <li className="text-primary font-poppins text-sm">A platform for anonymous users to post messages and engage in real-time chat.</li>
+                    <li className="text-primary font-poppins text-sm">Technology involves the PERN (Postgres, Express, React and Node) Stack.</li>
+                    <li className="text-primary font-poppins text-sm">Allows for real-time rendering of chats.</li>
+                    <li className="text-primary font-poppins text-sm">Utilizes a Rate Limiter to prevent spam and abuse.</li>
                 </ul>
             </div>
         </div>

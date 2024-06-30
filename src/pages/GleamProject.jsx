@@ -33,7 +33,9 @@ const GleamProject = () => {
                 </div>
 
                 <ul className="list-disc pl-3 pt-8">
-                    <li className="text-primary font-poppins text-sm">Used React for the backend</li>
+                    <li className="text-primary font-poppins text-sm">An official page for my band Gleam to host our songs, merch, and gig information.</li>
+                    <li className="text-primary font-poppins text-sm">Uses Redux for State Management.</li>
+                    <li className="text-primary font-poppins text-sm">Developed and integrated a music player to play the band's songs.</li>
                 </ul>
             </div>
         </div>

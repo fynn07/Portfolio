@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ProjectSection = () => {
     return(
-        <div className="flex flex-col pt-36 gap-11">
+        <div className="flex flex-col pt-8 gap-11">
             <p className="font-poppins font-semibold text-xl">Projects</p>
             <div className="grid grid-cols-2 gap-y-11 justify-items-center">
                 <Link to={"/cebu-underground-cave"} className="w-96 h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer">

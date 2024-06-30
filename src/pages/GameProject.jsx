@@ -32,7 +32,10 @@ const GameProject = () => {
                 </div>
 
                 <ul className="list-disc pl-3 pt-8">
-                    <li className="text-primary font-poppins text-sm">Used React for the backend</li>
+                    <li className="text-primary font-poppins text-sm">Top-down shooter game inspired by the likes of Brotato and Vampire Survivors.</li>
+                    <li className="text-primary font-poppins text-sm">Made with the Jave Game Development Framework LibGDX.</li>
+                    <li className="text-primary font-poppins text-sm">Some assets were made with GIMP.</li>
+                    <li className="text-primary font-poppins text-sm">JDBC was utilized to save high scores in a MySQL database.</li>
                 </ul>
             </div>
         </div>

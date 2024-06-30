@@ -1,9 +1,10 @@
+import { toast } from "react-hot-toast"
 import DownloadCVSvg from "./svg/DownloadCVSvg"
 import LocationSvg from "./svg/LocationSvg"
 
 const HeroInformation = () => {
     return (
-        <div>
+        <div className="mb-28">
             <div className="flex">
                 <div className="flex items-center gap-2 justify-center bg-green-200 px-4 rounded-full shadow-sm">
                     <p className="text-2xl text-green-700 pb-1 animate-pulse">•</p>
@@ -31,7 +32,7 @@ const HeroInformation = () => {
             <div>
                 <button className="flex mt-11 items-center gap-3 py-2 px-4 shadow-md border rounded-lg transition-all duration-100 hover:bg-background hover:scale-105">
                         <DownloadCVSvg/>
-                        <p className="font-poppins text-primary text-sm">View my CV</p>
+                        <p onClick={() => toast.error("no cv yet :(")} className="font-poppins text-primary text-sm">View my CV</p>
                 </button>
 
             </div>

@@ -20,7 +20,7 @@ const LeetcodeProject = () => {
                 </div>
 
                 <ul className="list-disc pl-3 pt-8">
-                    <li className="text-primary font-poppins text-sm">Used React for the backend</li>
+                    <li className="text-primary font-poppins text-sm">A bunch of Data Structures and Algorithm problems that I solved for fun.</li>
                 </ul>
             </div>
         </div>

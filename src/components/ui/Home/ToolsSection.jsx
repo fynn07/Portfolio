@@ -1,6 +1,6 @@
 const ToolsSection = () => {
     return(
-        <div className="pt-32 flex flex-col gap-8">
+        <div className="mt-4 mb-28 flex flex-col gap-8">
             <div>
                 <p className="font-poppins font-semibold text-2xl">Tech Stack</p>
             </div>
