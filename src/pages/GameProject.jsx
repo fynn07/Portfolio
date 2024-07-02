@@ -11,7 +11,7 @@ const GameProject = () => {
                         <BackSVG/>
                         <p className="font-poppins text-xs">Back to Main Page</p>
                     </Link>
-                    <Link to={"/leetcode"} className="border flex gap-2 items-center py-1 px-2 rounded-2xl shadow-sm transition-all duration-100 hover:scale-105">
+                    <Link to={"/visualizer"} className="border flex gap-2 items-center py-1 px-2 rounded-2xl shadow-sm transition-all duration-100 hover:scale-105">
                         <p className="font-poppins text-xs">Next Project</p>
                         <ArrowSvg/>
                     </Link>
@@ -22,7 +22,7 @@ const GameProject = () => {
 
                 <div className="flex justify-around py-6">
                     <a href="https://github.com/fynn07/brotato-clone-game" target="_blank" className="text-sm px-2 py-1 border rounded-xl border-opacity-50 shadow-md transition-all duration-100 hover:scale-105">Check Code</a>
-                    <a href="" target="_blank" className="text-sm px-2 py-1 border rounded-xl border-opacity-50 shadow-md transition-all duration-100 hover:scale-105">View Demo</a>
+                    <a href="https://www.youtube.com/watch?v=VhhG4BvMYNo&ab_channel=Fynn" target="_blank" className="text-sm px-2 py-1 border rounded-xl border-opacity-50 shadow-md transition-all duration-100 hover:scale-105">View Demo</a>
                 </div>
 
                 <p className="font-medium text-primary 2xl:text-xl">Tech Stack</p>

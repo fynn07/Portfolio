@@ -154,26 +154,6 @@ const ProjectSection = () => {
                     </motion.div>
                 </Link>
                 <Link
-                    to={"/visualizer"}
-                    className="w-80 h-64 sm:w-96 sm:h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer"
-                >
-                    <motion.img
-                        variants={itemVariants}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        className="rounded-t-lg h-48 sm:h-52 w-full"
-                        src="./assets/philippines_visualizer.jpeg"
-                        alt="Project 6 Image"
-                    />
-                    <motion.div variants={itemVariants} className="flex flex-col gap-1 p-4">
-                        <div className="flex items-center justify-between">
-                            <p className="font-poppins text-xs text-secondary">Python Script</p>
-                            <ArrowSvg />
-                        </div>
-                        <p className="font-poppins font-semibold text-sm text-primary">Philippine Province Visualizer</p>
-                    </motion.div>
-                </Link>
-                <Link
                     to={"/exiled"}
                     className="w-80 h-64 sm:w-96 sm:h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer"
                 >
@@ -191,6 +171,26 @@ const ProjectSection = () => {
                             <ArrowSvg />
                         </div>
                         <p className="font-poppins font-semibold text-sm text-primary">Exiled (Brotato Clone Game)</p>
+                    </motion.div>
+                </Link>
+                <Link
+                    to={"/visualizer"}
+                    className="w-80 h-64 sm:w-96 sm:h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer"
+                >
+                    <motion.img
+                        variants={itemVariants}
+                        initial="hidden"
+                        animate={inView ? "visible" : "hidden"}
+                        className="rounded-t-lg h-48 sm:h-52 w-full"
+                        src="./assets/philippines_visualizer.jpeg"
+                        alt="Project 6 Image"
+                    />
+                    <motion.div variants={itemVariants} className="flex flex-col gap-1 p-4">
+                        <div className="flex items-center justify-between">
+                            <p className="font-poppins text-xs text-secondary">Python Script</p>
+                            <ArrowSvg />
+                        </div>
+                        <p className="font-poppins font-semibold text-sm text-primary">Philippine Province Visualizer</p>
                     </motion.div>
                 </Link>
                 <Link

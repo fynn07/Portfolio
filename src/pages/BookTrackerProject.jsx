@@ -22,7 +22,7 @@ const BookTrackerProject = () => {
 
                 <div className="flex justify-around py-6">
                     <a href="https://github.com/fynn07/FSbooktracker" target="_blank" className="text-sm px-2 py-1 border rounded-xl border-opacity-50 shadow-md transition-all duration-100 hover:scale-105">Check Code</a>
-                    <a href="" className="text-sm px-2 py-1 border rounded-xl border-opacity-50 shadow-md transition-all duration-100 hover:scale-105">View Demo</a>
+                    <a href="https://www.youtube.com/watch?v=yY943woNK6g&ab_channel=Fynn" target="_blank" className="text-sm px-2 py-1 border rounded-xl border-opacity-50 shadow-md transition-all duration-100 hover:scale-105">View Demo</a>
                 </div>
 
                 <p className="font-medium text-primary 2xl:text-xl">Tech Stack</p>
