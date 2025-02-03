@@ -33,7 +33,7 @@ const HeroInformation = () => {
             <div className="flex justify-center sm:justify-normal">
                 <button className="flex mt-11 items-center gap-3 py-2 px-4 shadow-md border rounded-lg transition-all duration-100 hover:bg-background hover:scale-105">
                         <DownloadCVSvg/>
-                        <a href="https://flowcv.com/resume/do6hd0kjlv" target="_blank" className="font-poppins text-primary text-sm 2xl:text-base">View my CV</a>
+                        <a href="https://www.resumemate.io/resume/8riAYYAMVAELYCP" target="_blank" className="font-poppins text-primary text-sm 2xl:text-base">View my CV</a>
                 </button>
 
             </div>
