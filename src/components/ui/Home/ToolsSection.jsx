@@ -22,6 +22,7 @@ const itemVariants = {
 
 const sectionClass = "flex flex-col border border-black/10 gap-8 rounded-2xl bg-white/70 px-6 py-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-xl sm:px-8";
 const toolItemClass = "flex gap-4 rounded-xl p-2 transition-colors duration-200 hover:bg-background/70";
+const badgeClass = "flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary px-2 text-center font-poppins text-[0.65rem] font-semibold leading-tight text-white 2xl:h-14 2xl:w-14";
 
 const ToolsSection = () => {
   const clientRef = useRef(null);
@@ -62,11 +63,16 @@ const ToolsSection = () => {
             { src: "./assets/css_logo.png", name: "CSS", desc: "Style Sheets" },
             { src: "./assets/javascript_logo.png", name: "Javascript", desc: "Client-Side Scripting" },
             { src: "./assets/react_logo.png", name: "React", desc: "Dynamic Development" },
+            { src: "./assets/nextjs_logo.svg", name: "Next.js", desc: "React Framework" },
             { src: "./assets/tailwind_logo.png", name: "Tailwind", desc: "Utility Framework" },
             { src: "./assets/redux_logo.png", name: "Redux", desc: "State Management" },
-          ].map(({ src, name, desc }, idx) => (
+          ].map(({ src, badge, name, desc }, idx) => (
             <motion.div key={idx} variants={itemVariants} className={toolItemClass}>
-              <img loading="lazy" className="h-12 w-12 rounded-xl object-contain 2xl:h-14 2xl:w-14" src={src} alt={`${name} logo`} />
+              {src ? (
+                <img loading="lazy" className="h-12 w-12 rounded-xl object-contain 2xl:h-14 2xl:w-14" src={src} alt={`${name} logo`} />
+              ) : (
+                <div className={badgeClass}>{badge}</div>
+              )}
               <div className="flex flex-col">
                 <p className="font-poppins font-medium 2xl:text-lg">{name}</p>
                 <p className="font-poppins font-medium text-secondary text-sm 2xl:text-base">{desc}</p>
@@ -93,11 +99,19 @@ const ToolsSection = () => {
             { src: "./assets/postgres_logo.png", name: "Postgres", desc: "Relational Database" },
             { src: "./assets/express_logo.png", name: "Express", desc: "API Development" },
             { src: "./assets/node_logo.png", name: "Node", desc: "Runtime Environment" },
+            { src: "./assets/nestjs_logo.svg", name: "NestJS", desc: "Backend Framework" },
+            { src: "./assets/sql_logo.png", name: "SQL", desc: "Query Language" },
+            { src: "./assets/rest_api_icon.png", name: "REST APIs", desc: "API Architecture" },
+            { src: "./assets/gcp_logo.svg", name: "GCP", desc: "Cloud Platform" },
             { src: "./assets/aws_logo.png", name: "AWS S3", desc: "File Hosting" },
             { src: "./assets/php_logo.png", name: "PHP", desc: "Server-Side Scripting" },
-          ].map(({ src, name, desc }, idx) => (
+          ].map(({ src, badge, name, desc }, idx) => (
             <motion.div key={idx} variants={itemVariants} className={toolItemClass}>
-              <img loading="lazy" className="h-12 w-12 rounded-xl object-contain 2xl:h-14 2xl:w-14" src={src} alt={`${name} logo`} />
+              {src ? (
+                <img loading="lazy" className="h-12 w-12 rounded-xl object-contain 2xl:h-14 2xl:w-14" src={src} alt={`${name} logo`} />
+              ) : (
+                <div className={badgeClass}>{badge}</div>
+              )}
               <div className="flex flex-col">
                 <p className="font-poppins font-medium 2xl:text-lg">{name}</p>
                 <p className="font-poppins font-medium text-secondary text-sm 2xl:text-base">{desc}</p>
