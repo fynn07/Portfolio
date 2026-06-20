@@ -7,25 +7,26 @@ import HomeSvg from "./ui/Navbar/svg/HomeSvg";
 import ProjectsSvg from "./ui/Navbar/svg/ProjectsSvg";
 
 const MobileNavBar = () => {
-    const {homeRef, stackRef, projectsRef} = useRefs();
+    const {homeRef, stackRef, projectsRef, contactRef} = useRefs();
     const scrollDirection = useScrollDirection();
+    const navItemClass = "flex h-11 w-11 items-center justify-center rounded-xl transition-all duration-200 hover:bg-white hover:shadow-sm hover:cursor-pointer";
 
     return (
-        <div className={`w-screen fixed bg-background border-b-2 p-4 sm:hidden transition-transform duration-300 ${scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"}`}>
+        <div className={`w-screen fixed z-20 bg-white/85 border-b border-black/10 p-3 shadow-sm backdrop-blur-xl sm:hidden transition-transform duration-300 ${scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"}`}>
             <div className="flex justify-around">
-                <div onClick={() => window.scrollTo({top: 0, behavior: "smooth"})} className="flex gap-4 justify-center lg:justify-start lg:px-4 lg:py-2 rounded-lg transition-all duration-150 hover:bg-gray-200 hover:cursor-pointer">
+                <div onClick={() => window.scrollTo({top: 0, behavior: "smooth"})} className={navItemClass}>
                     <HomeSvg/>
                     <p className="text-secondary text-sm font-poppins font-medium hidden lg:inline 2xl:text-base">Home</p>
                 </div>
-                <div onClick={() => scrollToRef(stackRef)} className="flex gap-4 justify-center lg:justify-start lg:px-4 lg:py-2 rounded-lg transition-all duration-150 hover:bg-gray-200 hover:cursor-pointer">
+                <div onClick={() => scrollToRef(stackRef)} className={navItemClass}>
                     <AboutSvg/>
                     <p className="text-secondary text-sm font-poppins font-medium hidden lg:inline 2xl:text-base">Stack</p>
                 </div>
-                <div onClick={() => scrollToRef(projectsRef)} className="flex gap-4 justify-center lg:justify-start lg:px-4 lg:py-2 rounded-lg transition-all duration-150 hover:bg-gray-200 hover:cursor-pointer">
+                <div onClick={() => scrollToRef(projectsRef)} className={navItemClass}>
                     <ProjectsSvg/>
                     <p className="text-secondary text-sm font-poppins font-medium hidden lg:inline 2xl:text-base">Projects</p>
                 </div>
-                <div className="flex gap-4 justify-center lg:justify-start lg:px-4 lg:py-2 rounded-lg transition-all duration-150 hover:bg-gray-200 hover:cursor-pointer">
+                <div onClick={() => scrollToRef(contactRef)} className={navItemClass}>
                     <ContactSvg/>
                     <p className="text-secondary text-sm font-poppins font-medium hidden lg:inline 2xl:text-base">Contact</p>
                 </div>

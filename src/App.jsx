@@ -11,11 +11,11 @@ function App() {
 
   return (
     <RefContext.Provider value={refs}>
-      <div className="flex flex-col bg-background sm:flex-row">
+      <div className="flex min-h-screen flex-col bg-transparent sm:flex-row">
           <Toaster/>
           <Navbar/>
           <MobileNavBar/>
-          <div className="flex flex-col">
+          <div className="flex flex-1 flex-col">
             <Home/>
             <Footer/>
           </div>

@@ -2,46 +2,90 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ArrowSvg from "./svg/ArrowSvg";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+
+const projects = [
+    {
+        to: "/cebu-underground-cave",
+        image: "./assets/cebu_underground.png",
+        type: "Full-Stack Web Application",
+        title: "Cebu Underground Cave (Social Media Site)",
+    },
+    {
+        to: "/messaging-board",
+        image: "./assets/messaging_board.png",
+        type: "Full-Stack Web Application",
+        title: "Anonymous Messaging Board",
+    },
+    {
+        to: "/gleam",
+        image: "./assets/gleam_website.png",
+        type: "Front-End Web Application",
+        title: "Gleam Band Website",
+    },
+    {
+        to: "/book-tracker",
+        image: "./assets/book_tracker.png",
+        type: "Full-Stack Application",
+        title: "Book Tracker",
+    },
+    {
+        to: "/tracktrove",
+        image: "./assets/tracktrove.png",
+        type: "Python Script",
+        title: "TrackTrove (Spotify Music Downloader)",
+    },
+    {
+        to: "/exiled",
+        image: "./assets/exiled_game.png",
+        type: "Game Development | Java",
+        title: "Exiled (Brotato Clone Game)",
+    },
+    {
+        to: "/visualizer",
+        image: "./assets/philippines_visualizer.jpeg",
+        type: "Python Script",
+        title: "Philippine Province Visualizer",
+    },
+    {
+        to: "/leetcode",
+        image: "./assets/leetcode_image.png",
+        type: "Data Structures and Algorithms",
+        title: "Leetcode Solved Problems",
+    },
+];
+
+const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: "spring",
+            stiffness: 50,
+            damping: 20,
+            staggerChildren: 0.12,
+        },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+};
 
 const ProjectSection = () => {
     const { ref, inView } = useInView({
         triggerOnce: true,
-        threshold: 0.2, 
+        threshold: 0.2,
     });
 
-    useEffect(() => {
-        if (inView) {
-            console.log("animation")
-        }
-    }, [inView]);
-
-    const containerVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                type: "spring",
-                stiffness: 50,
-                damping: 20,
-                staggerChildren: 0.2,
-            },
-        },
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 },
-    };
-
     return (
-        <div ref={ref} className="flex flex-col pt-8 gap-11">
+        <section ref={ref} className="flex flex-col pt-8 gap-11">
             <motion.p
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 variants={containerVariants}
-                className="font-poppins font-semibold text-xl 2xl:text-2xl"
+                className="font-poppins font-semibold text-2xl 2xl:text-3xl"
             >
                 Projects
             </motion.p>
@@ -49,172 +93,42 @@ const ProjectSection = () => {
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 variants={containerVariants}
-                className="grid grid-cols-1 gap-y-11 justify-items-center xl:grid-cols-2 2xl:grid-cols-3"
+                className="grid grid-cols-1 gap-6 justify-items-center xl:grid-cols-2 2xl:grid-cols-3"
             >
-                <Link
-                    to={"/cebu-underground-cave"}
-                    className="w-80 h-64 sm:w-96 sm:h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer"
-                >
-                    <motion.img
-                        variants={itemVariants}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        className="rounded-t-lg h-48 sm:h-52"
-                        src="./assets/cebu_underground.png"
-                        alt="Project 1 Image"
-                    />
-                    <motion.div variants={itemVariants} className="flex flex-col gap-1 p-4">
-                        <div className="flex items-center justify-between">
-                            <p className="font-poppins text-xs text-secondary">Full-Stack Web Application</p>
-                            <ArrowSvg />
-                        </div>
-                        <p className="font-poppins font-semibold text-xs sm:text-sm text-primary">
-                            Cebu Underground Cave (Social Media Site)
-                        </p>
+                {projects.map(({ to, image, type, title }) => (
+                    <motion.div key={to} variants={itemVariants} className="w-full max-w-sm">
+                        <Link
+                            to={to}
+                            className="group flex h-full min-h-72 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
+                        >
+                            <div className="flex w-full flex-col">
+                                <div className="h-48 overflow-hidden bg-background sm:h-52">
+                                    <img
+                                        loading="lazy"
+                                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        src={image}
+                                        alt={`${title} preview`}
+                                    />
+                                </div>
+                                <div className="flex flex-1 flex-col gap-2 p-5">
+                                    <div className="flex items-center justify-between gap-4">
+                                        <p className="font-poppins text-xs font-medium uppercase text-secondary">
+                                            {type}
+                                        </p>
+                                        <span className="rounded-full bg-background p-2 transition-colors duration-200 group-hover:bg-primary">
+                                            <ArrowSvg />
+                                        </span>
+                                    </div>
+                                    <p className="font-poppins font-semibold text-sm leading-6 text-primary sm:text-base">
+                                        {title}
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
                     </motion.div>
-                </Link>
-                <Link
-                    to={"/messaging-board"}
-                    className="w-80 h-64 sm:w-96 sm:h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer"
-                >
-                    <motion.img
-                        variants={itemVariants}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        className="rounded-t-lg"
-                        src="./assets/messaging_board.png"
-                        alt="Project 2 Image"
-                    />
-                    <motion.div variants={itemVariants} className="flex flex-col gap-1 p-4">
-                        <div className="flex items-center justify-between">
-                            <p className="font-poppins text-xs text-secondary">Full-Stack Web Application</p>
-                            <ArrowSvg />
-                        </div>
-                        <p className="font-poppins font-semibold text-sm text-primary">Anonymous Messaging Board</p>
-                    </motion.div>
-                </Link>
-                <Link
-                    to={"/gleam"}
-                    className="w-80 h-64 sm:w-96 sm:h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer"
-                >
-                    <motion.img
-                        variants={itemVariants}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        className="rounded-t-lg"
-                        src="./assets/gleam_website.png"
-                        alt="Project 3 Image"
-                    />
-                    <motion.div variants={itemVariants} className="flex flex-col gap-1 p-4">
-                        <div className="flex items-center justify-between">
-                            <p className="font-poppins text-xs text-secondary">Front-End Web Application</p>
-                            <ArrowSvg />
-                        </div>
-                        <p className="font-poppins font-semibold text-sm text-primary">Gleam Band Website</p>
-                    </motion.div>
-                </Link>
-                <Link
-                    to={"/book-tracker"}
-                    className="w-80 h-64 sm:w-96 sm:h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer"
-                >
-                    <motion.img
-                        variants={itemVariants}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        className="rounded-t-lg h-48 sm:h-52"
-                        src="./assets/book_tracker.png"
-                        alt="Project 4 Image"
-                    />
-                    <motion.div variants={itemVariants} className="flex flex-col gap-1 p-4">
-                        <div className="flex items-center justify-between">
-                            <p className="font-poppins text-xs text-secondary">Full-Stack Application</p>
-                            <ArrowSvg />
-                        </div>
-                        <p className="font-poppins font-semibold text-sm text-primary">Book Tracker</p>
-                    </motion.div>
-                </Link>
-                <Link
-                    to={"/tracktrove"}
-                    className="w-80 h-64 sm:w-96 sm:h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer"
-                >
-                    <motion.img
-                        variants={itemVariants}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        className="rounded-t-lg w-full h-48 sm:h-52"
-                        src="./assets/tracktrove.png"
-                        alt="Project 5 Image"
-                    />
-                    <motion.div variants={itemVariants} className="flex flex-col gap-1 p-4">
-                        <div className="flex items-center justify-between">
-                            <p className="font-poppins text-xs text-secondary">Python Script</p>
-                            <ArrowSvg />
-                        </div>
-                        <p className="font-poppins font-semibold text-sm text-primary">TrackTrove (Spotify Music Downloader)</p>
-                    </motion.div>
-                </Link>
-                <Link
-                    to={"/exiled"}
-                    className="w-80 h-64 sm:w-96 sm:h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer"
-                >
-                    <motion.img
-                        variants={itemVariants}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        className="rounded-t-lg"
-                        src="./assets/exiled_game.png"
-                        alt="Project 7 Image"
-                    />
-                    <motion.div variants={itemVariants} className="flex flex-col gap-1 p-4">
-                        <div className="flex items-center justify-between">
-                            <p className="font-poppins text-xs text-secondary">Game Development | Java</p>
-                            <ArrowSvg />
-                        </div>
-                        <p className="font-poppins font-semibold text-sm text-primary">Exiled (Brotato Clone Game)</p>
-                    </motion.div>
-                </Link>
-                <Link
-                    to={"/visualizer"}
-                    className="w-80 h-64 sm:w-96 sm:h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer"
-                >
-                    <motion.img
-                        variants={itemVariants}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        className="rounded-t-lg h-48 sm:h-52 w-full"
-                        src="./assets/philippines_visualizer.jpeg"
-                        alt="Project 6 Image"
-                    />
-                    <motion.div variants={itemVariants} className="flex flex-col gap-1 p-4">
-                        <div className="flex items-center justify-between">
-                            <p className="font-poppins text-xs text-secondary">Python Script</p>
-                            <ArrowSvg />
-                        </div>
-                        <p className="font-poppins font-semibold text-sm text-primary">Philippine Province Visualizer</p>
-                    </motion.div>
-                </Link>
-                <Link
-                    to={"/leetcode"}
-                    className="w-80 h-64 sm:w-96 sm:h-72 border border-gray-300 bg-background rounded-lg transition ease-in-out hover:scale-105 hover:cursor-pointer"
-                >
-                    <motion.img
-                        variants={itemVariants}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        className="rounded-t-lg h-48 sm:h-52 w-full"
-                        src="./assets/leetcode_image.png"
-                        alt="Project 8 Image"
-                    />
-                    <motion.div variants={itemVariants} className="flex flex-col gap-1 p-4">
-                        <div className="flex items-center justify-between">
-                            <p className="font-poppins text-xs text-secondary">Data Structures and Algorithms</p>
-                            <ArrowSvg />
-                        </div>
-                        <p className="font-poppins font-semibold text-sm text-primary">Leetcode Solved Problems</p>
-                    </motion.div>
-                </Link>
+                ))}
             </motion.div>
-        </div>
+        </section>
     );
 };
 

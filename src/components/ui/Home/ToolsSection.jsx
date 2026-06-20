@@ -20,6 +20,9 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
+const sectionClass = "flex flex-col border border-black/10 gap-8 rounded-2xl bg-white/70 px-6 py-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-xl sm:px-8";
+const toolItemClass = "flex gap-4 rounded-xl p-2 transition-colors duration-200 hover:bg-background/70";
+
 const ToolsSection = () => {
   const clientRef = useRef(null);
   const isClientInView = useInView(clientRef, { once: true });
@@ -30,13 +33,16 @@ const ToolsSection = () => {
   const toolsRef = useRef(null);
   const isToolsInView = useInView(toolsRef, { once: true });
 
+  const aiRef = useRef(null);
+  const isAiInView = useInView(aiRef, { once: true });
+
   const othersRef = useRef(null);
   const isOthersInView = useInView(othersRef, { once: true });
 
   return (
-    <div className="mt-4 mb-28 flex flex-col gap-8">
+    <section className="mt-4 mb-28 flex flex-col gap-8">
       <motion.div initial="hidden" animate="visible" variants={containerVariants}>
-        <p className="font-poppins font-semibold text-2xl 2xl:text-3xl">Tech Stack</p>
+        <p className="font-poppins font-semibold text-2xl tracking-normal 2xl:text-3xl">Tech Stack</p>
       </motion.div>
 
       <motion.div
@@ -44,7 +50,7 @@ const ToolsSection = () => {
         initial="hidden"
         animate={isClientInView ? "visible" : "hidden"}
         variants={containerVariants}
-        className="flex flex-col border-2 border-background gap-8 rounded-lg px-8 py-8"
+        className={sectionClass}
       >
         <motion.p variants={itemVariants} className="font-poppins font-medium text-lg 2xl:text-xl">Client Side</motion.p>
         <motion.div
@@ -59,8 +65,8 @@ const ToolsSection = () => {
             { src: "./assets/tailwind_logo.png", name: "Tailwind", desc: "Utility Framework" },
             { src: "./assets/redux_logo.png", name: "Redux", desc: "State Management" },
           ].map(({ src, name, desc }, idx) => (
-            <motion.div key={idx} variants={itemVariants} className="flex gap-4">
-              <img loading="lazy" className="w-12 2xl:w-14" src={src} alt={`${name} logo`} />
+            <motion.div key={idx} variants={itemVariants} className={toolItemClass}>
+              <img loading="lazy" className="h-12 w-12 rounded-xl object-contain 2xl:h-14 2xl:w-14" src={src} alt={`${name} logo`} />
               <div className="flex flex-col">
                 <p className="font-poppins font-medium 2xl:text-lg">{name}</p>
                 <p className="font-poppins font-medium text-secondary text-sm 2xl:text-base">{desc}</p>
@@ -75,7 +81,7 @@ const ToolsSection = () => {
         initial="hidden"
         animate={isServerInView ? "visible" : "hidden"}
         variants={containerVariants}
-        className="flex flex-col border-2 border-background gap-8 rounded-lg px-8 py-8"
+        className={sectionClass}
       >
         <motion.p variants={itemVariants} className="font-poppins font-medium text-lg 2xl:text-xl">Server Side</motion.p>
         <motion.div
@@ -90,8 +96,39 @@ const ToolsSection = () => {
             { src: "./assets/aws_logo.png", name: "AWS S3", desc: "File Hosting" },
             { src: "./assets/php_logo.png", name: "PHP", desc: "Server-Side Scripting" },
           ].map(({ src, name, desc }, idx) => (
-            <motion.div key={idx} variants={itemVariants} className="flex gap-4">
-              <img loading="lazy" className="w-12 2xl:w-14" src={src} alt={`${name} logo`} />
+            <motion.div key={idx} variants={itemVariants} className={toolItemClass}>
+              <img loading="lazy" className="h-12 w-12 rounded-xl object-contain 2xl:h-14 2xl:w-14" src={src} alt={`${name} logo`} />
+              <div className="flex flex-col">
+                <p className="font-poppins font-medium 2xl:text-lg">{name}</p>
+                <p className="font-poppins font-medium text-secondary text-sm 2xl:text-base">{desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        ref={aiRef}
+        initial="hidden"
+        animate={isAiInView ? "visible" : "hidden"}
+        variants={containerVariants}
+        className={sectionClass}
+      >
+        <motion.p variants={itemVariants} className="font-poppins font-medium text-lg 2xl:text-xl">AI Technologies</motion.p>
+        <motion.div
+          variants={containerVariants}
+          className="grid grid-cols-1 gap-y-8 sm:grid-cols-2 xl:grid-cols-3"
+        >
+          {[
+            { src: "./assets/llm_icon.png", name: "LLMs", desc: "Language Models" },
+            { src: "./assets/ai_agents_icon.webp", name: "AI Agents", desc: "Autonomous Tool Use" },
+            { src: "./assets/agentic_workflows_icon.png", name: "Agentic Workflows", desc: "Multi-Step Automation" },
+            { src: "./assets/mcp_logo.png", name: "MCP", desc: "Model Context Protocol" },
+            { src: "./assets/claude_logo.svg", name: "Claude Code", desc: "AI Coding Assistant" },
+            { src: "./assets/openai_logo.svg", name: "OpenAI", desc: "AI Platform" },
+          ].map(({ src, name, desc }, idx) => (
+            <motion.div key={idx} variants={itemVariants} className={toolItemClass}>
+              <img loading="lazy" className="h-12 w-12 rounded-xl object-contain 2xl:h-14 2xl:w-14" src={src} alt={`${name} logo`} />
               <div className="flex flex-col">
                 <p className="font-poppins font-medium 2xl:text-lg">{name}</p>
                 <p className="font-poppins font-medium text-secondary text-sm 2xl:text-base">{desc}</p>
@@ -106,7 +143,7 @@ const ToolsSection = () => {
         initial="hidden"
         animate={isToolsInView ? "visible" : "hidden"}
         variants={containerVariants}
-        className="flex flex-col border-2 border-background gap-8 rounded-lg px-8 py-8"
+        className={sectionClass}
       >
         <motion.p variants={itemVariants} className="font-poppins font-medium text-lg 2xl:text-xl">Tools</motion.p>
         <motion.div
@@ -118,8 +155,8 @@ const ToolsSection = () => {
             { src: "./assets/postman_logo.png", name: "Postman", desc: "API Testing" },
             { src: "./assets/vim_logo.png", name: "Vim Motions", desc: "Utility" },
           ].map(({ src, name, desc }, idx) => (
-            <motion.div key={idx} variants={itemVariants} className="flex gap-4">
-              <img loading="lazy" className="w-12 2xl:w-14" src={src} alt={`${name} logo`} />
+            <motion.div key={idx} variants={itemVariants} className={toolItemClass}>
+              <img loading="lazy" className="h-12 w-12 rounded-xl object-contain 2xl:h-14 2xl:w-14" src={src} alt={`${name} logo`} />
               <div className="flex flex-col">
                 <p className="font-poppins font-medium 2xl:text-lg">{name}</p>
                 <p className="font-poppins font-medium text-secondary text-sm 2xl:text-base">{desc}</p>
@@ -134,7 +171,7 @@ const ToolsSection = () => {
         initial="hidden"
         animate={isOthersInView ? "visible" : "hidden"}
         variants={containerVariants}
-        className="flex flex-col border-2 border-background gap-8 rounded-lg px-8 py-8"
+        className={sectionClass}
       >
         <motion.p variants={itemVariants} className="font-poppins font-medium text-lg 2xl:text-xl">Others</motion.p>
         <motion.div
@@ -145,8 +182,8 @@ const ToolsSection = () => {
             { src: "./assets/python_logo.png", name: "Python", desc: "Gen Purpose / Scripting" },
             { src: "./assets/java_logo.png", name: "Java", desc: "OOP" },
           ].map(({ src, name, desc }, idx) => (
-            <motion.div key={idx} variants={itemVariants} className="flex gap-4">
-              <img loading="lazy" className="w-12 2xl:w-14" src={src} alt={`${name} logo`} />
+            <motion.div key={idx} variants={itemVariants} className={toolItemClass}>
+              <img loading="lazy" className="h-12 w-12 rounded-xl object-contain 2xl:h-14 2xl:w-14" src={src} alt={`${name} logo`} />
               <div className="flex flex-col">
                 <p className="font-poppins font-medium 2xl:text-lg">{name}</p>
                 <p className="font-poppins font-medium text-secondary text-sm 2xl:text-base">{desc}</p>
@@ -155,7 +192,7 @@ const ToolsSection = () => {
           ))}
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 
